@@ -19,7 +19,6 @@ export class Job {
     constructor(private embedVideoService : EmbedVideoService){
         this.id = Job.ID_COUNT;
         Job.ID_COUNT++;
-
         this.setVideo(DEFAULT_VIDEO);
     }
     public setVideo(newVideoID : string){
@@ -49,6 +48,30 @@ export class Job {
             return this.showVideo();
         else
             return this.showImage();
+    }
+
+    public setupWithVideo(
+        inDescription: string,
+        inCategories : Category[],
+        inVideo: string
+        ) : void {
+        this.setVideo(inVideo);
+        this.setup(inDescription, inCategories);
+    }
+
+    public setupWithImage(
+        inDescription: string,
+        inCategories : Category[],
+        inImage: string
+        ) : void {
+        this.setImage(inImage);
+        this.setup(inDescription, inCategories);
+    }
+
+    public setup(inDescription:string, inCategories: Category[]){
+        this.categories = inCategories;
+        this.description = inDescription;
+
     }
 
 }
