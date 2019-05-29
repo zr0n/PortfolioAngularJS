@@ -1,7 +1,9 @@
-import { YoutubeVideo, JobImage } from "./types"
+import { YoutubeVideo } from "./youtube-video"
+import { JobImage } from './job-image'
 import { EmbedVideoService } from 'ngx-embed-video'
 import { Category } from './category'
 
+const DEFAULT_VIDEO : string = "";
 
 export class Job {
     public id : Number;
@@ -17,6 +19,8 @@ export class Job {
     constructor(private embedVideoService : EmbedVideoService){
         this.id = Job.ID_COUNT;
         Job.ID_COUNT++;
+
+        this.setVideo(DEFAULT_VIDEO);
     }
     public setVideo(newVideoID : string){
         let newVideo : YoutubeVideo = new YoutubeVideo(newVideoID);

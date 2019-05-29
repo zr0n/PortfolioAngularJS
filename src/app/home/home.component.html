@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+Selected Category: {{selectedCategory}}
+<div style="text-align:center">
+  <ul class = "categories">
+    <!--
+      public static Javascript : Number = 1;
+    public static Android : Number = 2;
+    public static C : Number = 3;
+    public static Java : Number = 4;
+    public static Unity : Number = 5;
+    public static Unreal : Number = 6;
+
+    public static Other: Number = 99;
+    -->
+    <li (click)="selectCategory(1)">
+        Javascript
+    </li>
+    <li (click)="selectCategory(2)">
+        Android
+    </li>
+    <li (click)="selectCategory(3)">
+        C
+    </li>
+    <li (click)="selectCategory(4)">
+        Java
+    </li>
+    <li (click)="selectCategory(5)">
+        Unity
+    </li>
+    <li (click)="selectCategory(6)">
+        Unreal
+    </li>
+    <li (click)="selectCategory(99)">
+        Other
+    </li>
+  </ul>
+  <div *ngFor="let job of jobs" [innerHTML]="job.show()">
+    
+  </div>
+</div>
