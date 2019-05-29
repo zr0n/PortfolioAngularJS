@@ -1,12 +1,14 @@
 import { YoutubeVideo, JobImage } from "./types"
 import { EmbedVideoService } from 'ngx-embed-video'
+import { Category } from './category'
 
 
-export class Job{
+export class Job {
     public video : YoutubeVideo;
     public image : JobImage;
     public bShowVideo: Boolean = true;
-    
+    public categories : Category[];
+    public description : string = "";
 
     constructor(private embedVideoService : EmbedVideoService){
     }
