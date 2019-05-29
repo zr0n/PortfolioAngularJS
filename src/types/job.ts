@@ -7,7 +7,7 @@ export class Job {
     public video : YoutubeVideo;
     public image : JobImage;
     public bShowVideo: Boolean = true;
-    public categories : Category[];
+    public categories : Category[] = [];
     public description : string = "";
 
     constructor(private embedVideoService : EmbedVideoService){
