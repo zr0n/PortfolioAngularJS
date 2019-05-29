@@ -4,13 +4,19 @@ import { Category } from './category'
 
 
 export class Job {
+    public id : Number;
     public video : YoutubeVideo;
     public image : JobImage;
     public bShowVideo: Boolean = true;
     public categories : Category[] = [];
     public description : string = "";
 
+
+    private static ID_COUNT : number = 0;
+
     constructor(private embedVideoService : EmbedVideoService){
+        this.id = Job.ID_COUNT;
+        Job.ID_COUNT++;
     }
     public setVideo(newVideoID : string){
         let newVideo : YoutubeVideo = new YoutubeVideo(newVideoID);
@@ -40,4 +46,5 @@ export class Job {
         else
             return this.showImage();
     }
+
 }
