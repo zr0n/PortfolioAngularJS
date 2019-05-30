@@ -26,8 +26,7 @@ Selected Category: {{selectedCategory}}
   </ul>
   <div
     *ngFor="let job of jobs"
-    [innerHTML]="job.show()"
-    (click)="goToDetail(job.id)"
     >
+        <a href="/detail/{{job.id}}">{{job.title}}</a>
   </div>
 </div>

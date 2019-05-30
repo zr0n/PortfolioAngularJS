@@ -7,6 +7,7 @@ const DEFAULT_VIDEO : string = "";
 
 export class Job {
     public id : Number;
+    public title : string = "Undefined";
     public video : YoutubeVideo;
     public image : JobImage;
     public bShowVideo: Boolean = true;
@@ -51,19 +52,23 @@ export class Job {
     }
 
     public setupWithVideo(
+        inTitle: string,
         inDescription: string,
         inCategories : Category[],
         inVideo: string
         ) : void {
+        this.title = inTitle
         this.setVideo(inVideo);
         this.setup(inDescription, inCategories);
     }
 
     public setupWithImage(
+        inTitle : string,
         inDescription: string,
         inCategories : Category[],
         inImage: string
         ) : void {
+        this.title = inTitle
         this.setImage(inImage);
         this.setup(inDescription, inCategories);
     }
