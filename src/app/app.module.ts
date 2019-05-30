@@ -1,26 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component'
 import { HttpClientModule } from "@angular/common/http"
 
-import { EmbedVideo } from 'ngx-embed-video' 
+import { EmbedVideo } from 'ngx-embed-video';
+import { JobDetailComponent } from './job-detail/job-detail.component' 
 
+const appRoutes : Routes = [
+  { path: '', component: HomeComponent},
+  { path: 'detail/:id', component: JobDetailComponent }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    JobDetailComponent
   ],
   imports: [
     BrowserModule,
     EmbedVideo.forRoot(),
     HttpClientModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent}
-    ])
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

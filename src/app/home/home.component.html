@@ -2,16 +2,6 @@
 Selected Category: {{selectedCategory}}
 <div style="text-align:center">
   <ul class = "categories">
-    <!--
-      public static Javascript : Number = 1;
-    public static Android : Number = 2;
-    public static C : Number = 3;
-    public static Java : Number = 4;
-    public static Unity : Number = 5;
-    public static Unreal : Number = 6;
-
-    public static Other: Number = 99;
-    -->
     <li (click)="selectCategory(1)">
         Javascript
     </li>
@@ -34,7 +24,10 @@ Selected Category: {{selectedCategory}}
         Other
     </li>
   </ul>
-  <div *ngFor="let job of jobs" [innerHTML]="job.show()">
-    
+  <div
+    *ngFor="let job of jobs"
+    [innerHTML]="job.show()"
+    (click)="goToDetail(job.id)"
+    >
   </div>
 </div>

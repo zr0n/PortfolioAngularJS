@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common'
 
 import { Job, JobImage, YoutubeVideo } from "../../types"
 import { EmbedVideoService } from 'ngx-embed-video'
@@ -12,14 +13,23 @@ import { Category } from '../../types/category'
 export class HomeComponent implements OnInit {
 
   jobs : Job[];
-  allJobs : Job[];
+  location: Location;
   selectedCategory: Number = 1;
   embedVideoService : EmbedVideoService;
+  
+  public static allJobs : Job[];
+  
+  constructor(
+    embedVideoService : EmbedVideoService,
+    locationService: Location
+  ){
 
-  constructor(embedVideoService : EmbedVideoService){
     this.embedVideoService = embedVideoService;
-
-    this.setupJobs();
+    this.location = locationService;  
+    this.jobs = [];
+    HomeComponent.setupJobs(this.embedVideoService);
+    this.jobs = HomeComponent.allJobs;
+    this.updateJobs()
   }
 
   ngOnInit(){
@@ -33,7 +43,7 @@ export class HomeComponent implements OnInit {
   updateJobs() : void{
     console.log("Starting the search...")
     this.jobs =
-      this.allJobs.filter((job: Job) => {
+      HomeComponent.allJobs.filter((job: Job) => {
         let accepted : Boolean =
           job.categories.find(category => {
             return category == this.selectedCategory
@@ -47,24 +57,23 @@ export class HomeComponent implements OnInit {
   }
 
 
-  setupJobs() : void {
-    this.jobs = [];
-    this.allJobs = []
+  public static setupJobs(embedVideoService : EmbedVideoService) : void {
+    HomeComponent.allJobs = []
   
     //mock
-    let job0 : Job = new Job(this.embedVideoService) ; // Academigo
-    let job1 : Job = new Job(this.embedVideoService); // BBlender
-    let job2 : Job = new Job(this.embedVideoService); // Churroz Game Engine
-    let job3 : Job = new Job(this.embedVideoService);
-    let job4 : Job = new Job(this.embedVideoService);
-    let job5 : Job = new Job(this.embedVideoService);
-    let job6 : Job = new Job(this.embedVideoService);
-    let job7 : Job = new Job(this.embedVideoService);
-    let job8 : Job = new Job(this.embedVideoService);
-    let job9 : Job = new Job(this.embedVideoService);
-    let job10 : Job = new Job(this.embedVideoService);
-    let job11: Job = new Job(this.embedVideoService);
-    let job12: Job = new Job(this.embedVideoService);
+    let job0 : Job = new Job(embedVideoService) ; // Academigo
+    let job1 : Job = new Job(embedVideoService); // BBlender
+    let job2 : Job = new Job(embedVideoService); // Churroz Game Engine
+    let job3 : Job = new Job(embedVideoService);
+    let job4 : Job = new Job(embedVideoService);
+    let job5 : Job = new Job(embedVideoService);
+    let job6 : Job = new Job(embedVideoService);
+    let job7 : Job = new Job(embedVideoService);
+    let job8 : Job = new Job(embedVideoService);
+    let job9 : Job = new Job(embedVideoService);
+    let job10 : Job = new Job(embedVideoService);
+    let job11: Job = new Job(embedVideoService);
+    let job12: Job = new Job(embedVideoService);
 
     job0.setupWithImage(
       "Utilitário para musculação, auxilia nos treinos diários",
@@ -149,8 +158,14 @@ export class HomeComponent implements OnInit {
     );
 
     
-    this.allJobs.push(job0, job1, job2, job3, job4, job5, job6, job7, job8, job9, job10, job11, job12);
-    this.jobs = this.allJobs
-    this.updateJobs()
+    HomeComponent.allJobs.push(job0, job1, job2, job3, job4, job5, job6, job7, job8, job9, job10, job11, job12);
+    
+    
+  }
+
+  private goToDetail( id : Number ){
+
+    this.location.go(`/detail/${id}`)
+
   }
 }
