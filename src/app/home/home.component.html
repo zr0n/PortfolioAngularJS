@@ -27,6 +27,9 @@ Selected Category: {{selectedCategory}}
   <div
     *ngFor="let job of jobs"
     >
-        <a href="/detail/{{job.id}}">{{job.title}}</a>
+        <a href="/detail/{{job.id}}" class="job-link">
+            <img src="{{job.thumbnail}}" />
+        </a>
+        
   </div>
 </div>

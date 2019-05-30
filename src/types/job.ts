@@ -13,7 +13,8 @@ export class Job {
     public bShowVideo: Boolean = true;
     public categories : Category[] = [];
     public description : string = "";
-
+    public thumbnail : string = "https://via.placeholder.com/150";
+    
 
     private static ID_COUNT : number = 0;
 
@@ -55,28 +56,40 @@ export class Job {
         inTitle: string,
         inDescription: string,
         inCategories : Category[],
-        inVideo: string
+        inVideo: string,
+        inThumbnail : string = ""
         ) : void {
         this.title = inTitle
         this.setVideo(inVideo);
         this.setup(inDescription, inCategories);
+        
+        this.setThumbnail(inThumbnail)
+
     }
 
     public setupWithImage(
         inTitle : string,
         inDescription: string,
         inCategories : Category[],
-        inImage: string
+        inImage: string,
+        inThumbnail : string = ""
         ) : void {
+
         this.title = inTitle
         this.setImage(inImage);
         this.setup(inDescription, inCategories);
+
+        this.setThumbnail(inThumbnail)
     }
 
     public setup(inDescription:string, inCategories: Category[]){
         this.categories = inCategories;
         this.description = inDescription;
 
+    }
+
+    public setThumbnail(inThumbnail: string) : void{
+        this.thumbnail = inThumbnail.length > 0 ? inThumbnail : this.thumbnail;
     }
 
 }
