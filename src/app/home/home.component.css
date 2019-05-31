@@ -48,13 +48,41 @@ div#home-wrapper{
 }
 
 #jobs-wrapper label{
-    display:none
+    display:inline-block;
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
 }
 
 #jobs-wrapper label.label-visible{
-    display:inline-block;
-    position:absolute;
+    display: inline-block;
     background: rgba(.03,.03,.03,.3);
-    width: 150px;
-    height: 150px
+    opacity: 1;
+}
+
+#jobs-wrapper label p{
+    margin: 0 auto;
+    display:inline-block;
+    
+    
+    
+    /*Vertical Alignment Snippet: */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+#jobs-wrapper a:visited, a{
+    color: #ff6721;
+    font-size: 18px;
+    font-family: Lucida Console
 }

@@ -1,5 +1,3 @@
-Selected Category: {{ selectedCategory }}
-<!--The content below is only a placeholder and can be replaced.-->
 <div id="home-wrapper">
   <ul class = "categories">
     
@@ -26,7 +24,7 @@ Selected Category: {{ selectedCategory }}
                       class="job-label"
                       [class.label-visible] = "jobHovered && jobHovered.id == job.id">
                       
-                      {{job.title}}
+                      <p> {{job.title}} </p>
                     
                     </label>
                     
