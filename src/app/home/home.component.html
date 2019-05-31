@@ -1,3 +1,4 @@
+Selected Category: {{ selectedCategory }}
 <!--The content below is only a placeholder and can be replaced.-->
 <div id="home-wrapper">
   <ul class = "categories">
@@ -17,6 +18,9 @@
             class="job masonry-item"
             >
                 <a href="/detail/{{job.id}}" class="job-link">
+                    <label class="job-label">
+                      {{job.title}}
+                    </label>
                     <img src="{{job.thumbnail}}" />
                 </a>
         </div>

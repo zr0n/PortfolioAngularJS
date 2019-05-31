@@ -6,6 +6,7 @@ import { HttpClientModule } from "@angular/common/http"
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component'
 import { JobDetailComponent } from './job-detail/job-detail.component' 
+import { Job } from '../types'
 
 import { EmbedVideo } from 'ngx-embed-video';
 import { NgxMasonryModule } from 'ngx-masonry'
@@ -33,6 +34,6 @@ const appRoutes : Routes = [
 })
 export class AppModule { 
   constructor(){
-  
+    Job.ID_COUNT = 0
   }
 }

@@ -70,6 +70,8 @@ class CategoriesService {
   }
   private makeJobs() : Job[]{
     //mock
+    Job.ID_COUNT = 0
+
     let job0 : Job = new Job(this.embedVideoService) ; // Academigo
     let job1 : Job = new Job(this.embedVideoService); // BBlender
     let job2 : Job = new Job(this.embedVideoService); // Churroz Game Engine

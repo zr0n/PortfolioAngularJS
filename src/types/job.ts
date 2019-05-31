@@ -16,12 +16,14 @@ export class Job {
     public thumbnail : string = "https://via.placeholder.com/150";
     
 
-    private static ID_COUNT : number = 0;
+    public static ID_COUNT : number = 0;
 
     constructor(private embedVideoService : EmbedVideoService){
         this.id = Job.ID_COUNT;
         Job.ID_COUNT++;
         this.setVideo(DEFAULT_VIDEO);
+
+        
     }
     public setVideo(newVideoID : string){
         let newVideo : YoutubeVideo = new YoutubeVideo(newVideoID);
