@@ -31,7 +31,6 @@ export class HomeComponent implements OnInit {
     this.location = locationService;  
     this.jobs = [];
     this.categoriesService = inCategoriesService;
-    console.log("Categories Service: ", this.categoriesService)
     this.jobs = this.categoriesService.allJobs;
   }
   
@@ -41,11 +40,11 @@ export class HomeComponent implements OnInit {
     this.jobs = this.categoriesService.jobs;
 
     this.categoriesNames = this.categoriesService.categoriesNames
-    console.log("Categories Names: ", this.categoriesNames)
   }
 
   selectCategory(categoryNumber : Number) : void{
     this.categoriesService.setCategory(categoryNumber)
+    this.selectedCategory = +categoryNumber
     this.fetchJobs()
   }
 

@@ -195,9 +195,7 @@ class CategoriesService {
           job.categories.find(category => {
             return category == this.selectedCategory
           }) != undefined;
-        if(accepted){
-          console.log('Job Accepted: ', job);
-        }
+          
         return accepted;
       });
       return jobs;

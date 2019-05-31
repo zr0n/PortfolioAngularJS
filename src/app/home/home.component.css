@@ -1,0 +1,19 @@
+
+ul.categories{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    margin-top: 300px
+
+}
+ul.categories li{
+    display: inline-block;
+    cursor: pointer;
+    background: red;
+    margin-bottom: 15px
+
+}
+
+ul.categories li.selected{
+    background: green
+}

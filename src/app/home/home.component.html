@@ -2,9 +2,12 @@
 Selected Category: {{selectedCategory}}
 <div style="text-align:center">
   <ul class = "categories">
+    
     <li
-        *ngFor="let category of categoriesNames">
-        {{ category.name }}
+        (click) = "selectCategory(category.id)"
+        *ngFor="let category of categoriesNames"
+        [class.selected] = " selectedCategory == category.id ">
+            {{ category.name }}
     </li>
   </ul>
   <div
