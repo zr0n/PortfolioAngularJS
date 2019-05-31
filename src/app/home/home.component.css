@@ -46,3 +46,15 @@ div#home-wrapper{
     width: 150px;
     height: 150px;
 }
+
+#jobs-wrapper label{
+    display:none
+}
+
+#jobs-wrapper label.label-visible{
+    display:inline-block;
+    position:absolute;
+    background: rgba(.03,.03,.03,.3);
+    width: 150px;
+    height: 150px
+}

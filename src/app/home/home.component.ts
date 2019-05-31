@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   embedVideoService : EmbedVideoService;
   categoriesService: CategoriesService;
   categoriesNames : CategoryName[];
+  jobHovered:Job;
   
   public static allJobs : Job[];
   
@@ -52,7 +53,13 @@ export class HomeComponent implements OnInit {
     this.jobs = this.categoriesService.jobs;
   }
 
+  hoveredItem(id: number): void{
+    this.jobHovered = this.categoriesService.searchJob(id)
+  }
 
+  unHoverItem(): void{
+    this.jobHovered = undefined
+  }
 
   private goToDetail( id : Number ){
 

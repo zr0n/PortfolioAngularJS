@@ -17,12 +17,22 @@ Selected Category: {{ selectedCategory }}
             *ngFor="let job of jobs"
             class="job masonry-item"
             >
-                <a href="/detail/{{job.id}}" class="job-link">
-                    <label class="job-label">
+                <a
+                  href="/detail/{{job.id}}"
+                  class="job-link"
+                  (mouseenter)="hoveredItem(job.id)"
+                  (mouseleave)="unHoverItem()">
+                    <label
+                      class="job-label"
+                      [class.label-visible] = "jobHovered && jobHovered.id == job.id">
+                      
                       {{job.title}}
+                    
                     </label>
+                    
                     <img src="{{job.thumbnail}}" />
-                </a>
+                
+                  </a>
         </div>
       </ngx-masonry>
       
