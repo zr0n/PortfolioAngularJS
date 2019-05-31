@@ -36,6 +36,7 @@ export class JobDetailComponent implements OnInit {
     this.id = +JobDetailComponent.route.snapshot.paramMap.get("id");
     this.categoriesService.setCategory(this.id)
     this.job = this.categoriesService.searchJob(this.id)
+    console.log("Job found: ", this.job)
   }
 
   

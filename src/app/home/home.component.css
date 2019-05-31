@@ -3,17 +3,38 @@ ul.categories{
     display: flex;
     flex-direction: column;
     width: 100px;
-    margin-top: 300px
 
 }
 ul.categories li{
     display: inline-block;
     cursor: pointer;
-    background: red;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    padding: 5px;
 
 }
 
 ul.categories li.selected{
-    background: green
+    color: #841ec9;
+    border: 1px;
+    border-color: #ff6721;
+    border-style: dashed
+}
+
+div.job{
+    display: inline-block;
+    margin: 10px
+}
+
+
+#jobs-wrapper{
+    display: flex;
+    flex-direction: row;
+    margin-left:50px;
+}
+
+div#home-wrapper{
+    display: flex;
+    flex-direction: row;
+    width:960px;
+    margin-top: 300px
 }

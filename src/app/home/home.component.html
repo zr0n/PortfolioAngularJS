@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 Selected Category: {{selectedCategory}}
-<div style="text-align:center">
+<div id="home-wrapper">
   <ul class = "categories">
     
     <li
@@ -10,12 +10,15 @@ Selected Category: {{selectedCategory}}
             {{ category.name }}
     </li>
   </ul>
-  <div
-    *ngFor="let job of jobs"
-    >
-        <a href="/detail/{{job.id}}" class="job-link">
-            <img src="{{job.thumbnail}}" />
-        </a>
-
+  <div id="jobs-wrapper">
+      <div
+        *ngFor="let job of jobs"
+        class="job"
+        >
+            <a href="/detail/{{job.id}}" class="job-link">
+                <img src="{{job.thumbnail}}" />
+            </a>
+    
+      </div>
   </div>
 </div>
