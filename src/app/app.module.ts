@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'
+import { HttpClientModule } from "@angular/common/http"
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component'
-import { HttpClientModule } from "@angular/common/http"
+import { JobDetailComponent } from './job-detail/job-detail.component' 
 
 import { EmbedVideo } from 'ngx-embed-video';
-import { JobDetailComponent } from './job-detail/job-detail.component' 
+import { NgxMasonryModule } from 'ngx-masonry'
 
 const appRoutes : Routes = [
   { path: '', component: HomeComponent},
@@ -24,7 +25,8 @@ const appRoutes : Routes = [
     BrowserModule,
     EmbedVideo.forRoot(),
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    NgxMasonryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

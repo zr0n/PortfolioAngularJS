@@ -10,14 +10,17 @@
     </li>
   </ul>
   <div id="jobs-wrapper">
-      <div
-        *ngFor="let job of jobs"
-        class="job"
-        >
-            <a href="/detail/{{job.id}}" class="job-link">
-                <img src="{{job.thumbnail}}" />
-            </a>
-    
-      </div>
+      <ngx-masonry>
+          <div
+            ngxMasonryItem
+            *ngFor="let job of jobs"
+            class="job masonry-item"
+            >
+                <a href="/detail/{{job.id}}" class="job-link">
+                    <img src="{{job.thumbnail}}" />
+                </a>
+        </div>
+      </ngx-masonry>
+      
   </div>
 </div>
