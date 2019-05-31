@@ -22,7 +22,6 @@ export class JobDetailComponent implements OnInit {
 
   id : Number;
   job : Job;
-  allJobs : Job[];
 
   constructor(
     private activatedRoute : ActivatedRoute,
@@ -35,8 +34,8 @@ export class JobDetailComponent implements OnInit {
 
   ngOnInit() {
     this.id = +JobDetailComponent.route.snapshot.paramMap.get("id");
-    this.job = this.categoriesService.selectCategory(this.id)
-    this.allJobs = HomeComponent.allJobs
+    this.categoriesService.setCategory(this.id)
+    this.job = this.categoriesService.searchJob(this.id)
   }
 
   
