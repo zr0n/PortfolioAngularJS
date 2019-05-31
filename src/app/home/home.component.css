@@ -3,7 +3,7 @@ ul.categories{
     display: flex;
     flex-direction: column;
     width: 150px;
-
+    font-family: Lucida Console
 }
 ul.categories li{
     display: inline-block;
@@ -40,4 +40,9 @@ div#home-wrapper{
     width:960px;
     margin-top: 300px;
     margin: 0 auto
+}
+
+#jobs-wrapper a img{
+    width: 150px;
+    height: 150px;
 }
