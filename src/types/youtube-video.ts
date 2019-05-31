@@ -11,7 +11,11 @@ export class YoutubeVideo{
         this.videoURL = newVideoURL
     }
     public showEmbedVideo() : string{
-        return this.videoService.embed(this.videoURL);
+        return this.videoService.embed(
+            this.videoURL,
+            {   //options
+                attr: { width: this.width, height: this.height }
+            });
     }
     constructor(
         videoURL: string
