@@ -1,3 +1,14 @@
-<p>
-  Job: {{ job.title }}
-</p>
+<div id="job-detail-wrapper">
+  <h1 id="job-detail-title">
+    {{ job.title }}
+  </h1>
+  <p
+    [innerHTML]="job.show()"
+    id="job-detail-sample">
+  </p>
+  <p id = "job-detail-title">
+    {{ job.description }}
+  </p>
+  
+</div>
+
