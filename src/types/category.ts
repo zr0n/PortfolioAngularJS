@@ -9,4 +9,5 @@ export class Category {
     public static Unreal : Number = 8;
 
     public static Other: Number = 99;
+
 }

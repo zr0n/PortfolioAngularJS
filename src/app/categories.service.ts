@@ -5,13 +5,22 @@ import { OnInit } from '@angular/core'
 
 import { Job, Category } from '../types'
 
+
+class CategoryName {
+  public id : Number;
+  public name : string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
-export class CategoriesService {
+
+class CategoriesService {
 
   public allJobs : Job[];
   public jobs : Job[];
+  public categoriesNames : CategoryName[] = [];
+
   private embedVideoService : EmbedVideoService;
 
   private selectedCategory: Number = 0;
@@ -23,6 +32,7 @@ export class CategoriesService {
   {
     this.embedVideoService = inEmbedVideoService
     this.updateJobs()
+    this.fillCategoriesNames()
   }
   
 
@@ -45,7 +55,19 @@ export class CategoriesService {
     });
     return jobFound
   }
-
+  private  fillCategoriesNames() : void{
+    this.categoriesNames = [
+      { name: 'Javascript',    id: Category.Javascript },
+      { name: 'Android',       id: Category.Android },
+      { name: 'C',             id: Category.C },
+      { name: 'C++',           id: Category.CPP },
+      { name: 'C#',            id: Category.C_Sharp },
+      { name: 'Java',          id: Category.Java },
+      { name: 'Unity Engine',  id: Category.Unity },
+      { name: 'Unreal Engine', id: Category.Unreal },
+      { name: 'Other',         id: Category.Other }
+    ]
+  }
   private makeJobs() : Job[]{
     //mock
     let job0 : Job = new Job(this.embedVideoService) ; // Academigo
@@ -185,3 +207,5 @@ export class CategoriesService {
 
   
 }
+
+export { CategoriesService, CategoryName }

@@ -2,26 +2,9 @@
 Selected Category: {{selectedCategory}}
 <div style="text-align:center">
   <ul class = "categories">
-    <li (click)="selectCategory(1)">
-        Javascript
-    </li>
-    <li (click)="selectCategory(2)">
-        Android
-    </li>
-    <li (click)="selectCategory(3)">
-        C
-    </li>
-    <li (click)="selectCategory(4)">
-        Java
-    </li>
-    <li (click)="selectCategory(5)">
-        Unity
-    </li>
-    <li (click)="selectCategory(6)">
-        Unreal
-    </li>
-    <li (click)="selectCategory(99)">
-        Other
+    <li
+        *ngFor="let category of categoriesNames">
+        {{ category.name }}
     </li>
   </ul>
   <div
@@ -30,6 +13,6 @@ Selected Category: {{selectedCategory}}
         <a href="/detail/{{job.id}}" class="job-link">
             <img src="{{job.thumbnail}}" />
         </a>
-        
+
   </div>
 </div>

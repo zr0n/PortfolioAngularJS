@@ -3,8 +3,7 @@ import { Location } from '@angular/common'
 import { EmbedVideoService } from 'ngx-embed-video'
 
 import { Job, JobImage, YoutubeVideo } from "../../types"
-import { Category } from '../../types/category'
-import { CategoriesService } from '../categories.service'
+import { CategoriesService, CategoryName } from '../categories.service'
 
 @Component({
   selector: 'app-home',
@@ -18,6 +17,7 @@ export class HomeComponent implements OnInit {
   selectedCategory: number = 1;
   embedVideoService : EmbedVideoService;
   categoriesService: CategoriesService;
+  categoriesNames : CategoryName[];
   
   public static allJobs : Job[];
   
@@ -39,6 +39,9 @@ export class HomeComponent implements OnInit {
     this.categoriesService.updateJobs();
     this.categoriesService.setCategory(this.selectedCategory)
     this.jobs = this.categoriesService.jobs;
+
+    this.categoriesNames = this.categoriesService.categoriesNames
+    console.log("Categories Names: ", this.categoriesNames)
   }
 
   selectCategory(categoryNumber : Number) : void{
