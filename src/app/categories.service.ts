@@ -30,15 +30,15 @@ class CategoriesService {
   )
   
   {
-    this.embedVideoService = inEmbedVideoService
-    this.updateJobs()
-    this.fillCategoriesNames()
+    this.embedVideoService = inEmbedVideoService;
+    this.updateJobs();
+    this.fillCategoriesNames();
   }
   
 
 
   public setCategory(newCategory: Number){
-    this.selectedCategory = newCategory
+    this.selectedCategory = newCategory;
     this.filterJobs();
 
   }
@@ -51,7 +51,7 @@ class CategoriesService {
     let jobFound : Job;
     this.allJobs.map(( job : Job) => {
       if(job.id == jobId)
-        jobFound = job
+        jobFound = job;
     });
     return jobFound
   }

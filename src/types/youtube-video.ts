@@ -7,14 +7,16 @@ export class YoutubeVideo{
     private width : Number =  1200;
     private height : Number = 670;
     
-    public setVideoUrl(newVideoID: string) : void {
-        this.videoURL = newVideoID;
+    public setVideoUrl(newVideoURL: string) : void {
+        this.videoURL = newVideoURL
     }
     public showEmbedVideo() : string{
-        return this.videoService.embed_youtube(this.videoURL);
+        return this.videoService.embed(this.videoURL);
     }
-    constructor(videoID: string){
-        this.videoURL = videoID;
+    constructor(
+        videoURL: string
+    ){
+        this.setVideoUrl(videoURL);
     }
 
 }
