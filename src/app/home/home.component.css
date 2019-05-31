@@ -2,7 +2,7 @@
 ul.categories{
     display: flex;
     flex-direction: column;
-    width: 100px;
+    width: 150px;
 
 }
 ul.categories li{
@@ -22,7 +22,7 @@ ul.categories li.selected{
 
 div.job{
     display: inline-block;
-    margin: 10px
+    margin: 10px;
 }
 
 
@@ -30,11 +30,14 @@ div.job{
     display: flex;
     flex-direction: row;
     margin-left:50px;
+    width: 500px;
+    flex-wrap: wrap
 }
 
 div#home-wrapper{
     display: flex;
     flex-direction: row;
     width:960px;
-    margin-top: 300px
+    margin-top: 300px;
+    margin: 0 auto
 }
