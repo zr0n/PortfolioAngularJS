@@ -9,7 +9,7 @@
     </li>
   </ul>
   <div id="jobs-wrapper">
-      <ngx-masonry>
+      <ngx-masonry  data-masonry='{ "columnWidth": 150, "itemSelector": ".masonry-item" }'>
           <div
             ngxMasonryItem
             *ngFor="let job of jobs"
@@ -31,8 +31,8 @@
                     <img src="{{job.thumbnail}}" />
                 
                   </a>
-        </div>
-      </ngx-masonry>
+            </div>
+        </ngx-masonry>
       
   </div>
 </div>

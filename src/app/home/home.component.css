@@ -21,13 +21,13 @@ ul.categories li.selected{
 }
 
 div.job{
-    display: inline-block;
     margin: 10px;
+    width:150px;
 }
 
 
 #jobs-wrapper{
-    display: flex;
+    display: block;
     flex-direction: row;
     margin-left:50px;
     width: 500px;
@@ -58,7 +58,6 @@ div#home-wrapper{
 }
 
 #jobs-wrapper label.label-visible{
-    display: inline-block;
     background: rgba(.03,.03,.03,.3);
     opacity: 1;
 }
@@ -85,4 +84,8 @@ div#home-wrapper{
     color: #ff6721;
     font-size: 18px;
     font-family: Lucida Console
+}
+
+.ngx-masonry{
+    column-count: 2;
 }
