@@ -56,6 +56,10 @@ export class Job {
             return this.showImage();
     }
 
+    public titleWithBrackets() : string{
+        return `{ ${this.title} }`
+    }
+
     public setupWithVideo(
         inTitle: string,
         inDescription: string,

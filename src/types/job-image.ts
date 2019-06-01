@@ -6,7 +6,7 @@ export class JobImage {
     }
 
     public show() : string{
-        return `<img src="${this.imageUrl}" />`;
+        return `<img src="${this.imageUrl}" class="job-image" />`;
     }
 
     constructor(imageUrl : string){

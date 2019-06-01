@@ -1,0 +1,37 @@
+#job-detail-wrapper{
+    width: 960px;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    -ms-transform: translate(-50%, -0%);
+    transform: translate(-50%, -0%);
+}
+#job-detail-back{
+    cursor: pointer;
+    color: #841ec9;
+    font-size: 2em;
+}
+#job-detail-title{
+
+}
+
+#job-detail-sample{
+    width:960px;
+}
+/** :host & ::ng-deep are used for [innerHTML] placed content*/
+:host ::ng-deep #job-detail-wrapper img{
+    width:100%;
+}
+#job-detail-sample iframe{
+
+}
+
+#job-detail-description{
+    font-family: Lucida Console
+}
+
+img{
+    width:100%;
+}

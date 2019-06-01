@@ -1,12 +1,15 @@
 <div id="job-detail-wrapper">
+  <div (click)="back()" id="job-detail-back">
+    < Back
+  </div>
   <h1 id="job-detail-title">
-    {{ job.title }}
+    {{ job.titleWithBrackets() }}
   </h1>
-  <p
+  <div
     [innerHTML]="job.show()"
     id="job-detail-sample">
-  </p>
-  <p id = "job-detail-title">
+  </div>
+  <p id = "job-detail-description">
     {{ job.description }}
   </p>
   

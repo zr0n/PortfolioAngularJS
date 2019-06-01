@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
-import { Job } from '../../types'
+import { Location } from "@angular/common"
 
 import { EmbedVideoService } from 'ngx-embed-video';
 
 
 import { HomeComponent } from '../home/home.component'
 import { CategoriesService } from '../categories.service'
+import { Job } from '../../types'
 
 
 @Component({
@@ -19,17 +20,20 @@ export class JobDetailComponent implements OnInit {
   public static route : ActivatedRoute;
 
   private categoriesService : CategoriesService;
+  private location : Location;
 
   id : Number;
   job : Job;
 
   constructor(
-    private activatedRoute : ActivatedRoute,
-    private embedVideoService: EmbedVideoService,
-    private inCategoriesService : CategoriesService
+    activatedRoute : ActivatedRoute,
+    embedVideoService: EmbedVideoService,
+    inCategoriesService : CategoriesService,
+    inLocation: Location
     ) {
     JobDetailComponent.route = activatedRoute;
     this.categoriesService = inCategoriesService;
+    this.location = inLocation;
   }
 
   ngOnInit() {
@@ -38,6 +42,8 @@ export class JobDetailComponent implements OnInit {
     this.job = this.categoriesService.searchJob(this.id)
   }
 
-  
+  public back() : void{
+    this.location.back();
+  }
 
 }
