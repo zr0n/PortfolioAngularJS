@@ -66,6 +66,7 @@ class CategoriesService {
       { name: 'Unity Engine',  id: Category.Unity },
       { name: 'Unreal Engine', id: Category.Unreal },
       { name: 'NodeJS',        id: Category.NodeJS },
+      { name: 'Angular JS',    id: Category.AngularJS},
       { name: 'Other',         id: Category.Other }
     ]
   }
@@ -91,6 +92,7 @@ class CategoriesService {
     let job15: Job = new Job(this.embedVideoService);
     let job16: Job = new Job(this.embedVideoService);
     let job17: Job = new Job(this.embedVideoService);
+    let job18: Job = new Job(this.embedVideoService);
 
     job0.setupWithImage(
       "Academigo",
@@ -240,8 +242,16 @@ class CategoriesService {
       "https://lh3.googleusercontent.com/qxKMV7Q2bIZmIwLF3u8YnC1L8AVdHx1kvqYXJoMxFWJFejkuRgdh00T_P2PKvpuysjHhcKe7Ud_NqEk006zEOQzkTniqW4r5FSL73dKdBOXZvVe6K-ufTnmNiU0mrahwL0Cpu81yXBAd1cQDWh3mlzXxG7iveK7CC07TuBlDYSz9_xJd8AXtO1KDxUKsM1caVDrmO8bjg03Ya4Vb-xHDeOxcM2k5nf40VibnzkYJ9geQfHxwJd5QZWYEjFPPtXZVPYDwLHHT2rsTWXzYJIoyEpl8OITZmKNFfjCxhGB7AoE7M_NNwff6FOdktwluwo9eqDyOveW5Y9AoK0LfMlaP1BBMWfUoKXS1wkVygY3uPuvXaXVwVS2wV9EW_m259WU8XsOesbCQaLaelcK2f6_MMtSN4U39Nbx2rZxhDB1FVAgUsOQRetIAdI-dkMRKMC-JhlOuDvlIixiNvyvXooEsbDMlIsmbLOXdQbsF5RZu-kzEAgFYI0OR7xu0RP1Scf1dnFpwL3uT0Svpg1zcrziszb6BBTOGtvz8dLBf-wFgKOr6IoC4v958ubX3EkNqI7fEU91RVKmun8FI9QLE10u__86dkP0db_GevL9u0SKcKwQLxp757Ml1N55GP51wgm370KBdESuC6iMVB0fxNsJGhd7rxkhJzd8=s150-no"
     );
 
+    job18.setupWithImage(
+      "Portfolio",
+      "Esse portfólio foi feito usando Angular JS 7 sem nenhum template.",
+      [Category.Javascript, Category.NodeJS, Category.AngularJS],
+      "https://lh3.googleusercontent.com/CQkcmSaHJy3PX583jh0AOjyusL3YY5vzpiELV9J8myNbwtkrd9COx4XLLpmI8vZ8TV_aVIqdkrxdIvlJE8-4APs7w9DmzHpTdIrHFd8HqUkh6RZ_yl-qXoUP81Cfy2nGsh_JlGv2hVK9uCZbqr-suDKafLxkyWpfPoefkbDj1s0_5z0GIEP8K5JOf9iJlfsgRHaFlU9P39TT1Yii_UmUZm-uu_bpdZgdyhuITfJaOLLql14ya4Ze_sAmq9F62wMajklSWiCbrhNaiiJkoiyWG1YBb7nKxLSLYSWeU_7SXIJ_bKkKl41UclpHe5_nvEjxalfoowdoevsLsk7eG4JH9IB9-41-vg6mXZYt9Xt1E6hTT-foSaUd7nNVYexNIkBKGu3idBA3kDbOnmsdunnWoqli8Amv5XEp5l8gqwd-M-hB8wJ1PcRMZX4ev4AYExqrAfmLdeFgdE3S72xBZXw8JYyliXAlzsIv2MuHxoyM8yLK11SbkogRh4ZricS-sfzAyhOL2-K_E8xMq1tfxi42ExkL8g__HePBVEvzBETLm9U53Ba3wQOsK0Lw6oR8ICjrhVerxPrO7jgUtfG3QAlpCCqM9drNTu0zK6kMsGcPGmZgRHWbHlSceFvXag77eivnAgI5-tCMFsk6t0bG1eI63GJ9U3ivuuE=w960-h471-no",
+      "https://lh3.googleusercontent.com/y_GV81oyXM2vpK8rvwOGNuynRBC85MFw__GlJQ2f71oW3-WHXjLOXXcIWMrHcjfpMBPEQUud4LZS-UpjiR09w-KLX0zJ2zQqGGW95LlHnvI2GfqOvQz2uJ1AJDwA0zx6DveaiYZ-76Xns4vtICDGDSkEojQIe-1Fyq_l4SOAwsEgaaCaKK8LuLmC1ErRSL4C1S9OsYZB0jdI1ISmLba-EO9E-roBt-ywVw3kwi3-goKjLpx5NDaGAcYZ1Sxj3iCeBbXy5XHLpJOjGzd01RgMALP2zDweVyNDEougJBxS_paq_ucSmwZAtr-f289FJGrNKdX4_G5uhqHIeZLG_yPhpcd1kBFmyES9qUtOh1MSCoeIzpKNpaCzITW7cRWCiFOxhGzMIHlPkOJxk7U4AFERD9CEL0fEJMo3LApJ2mYjBjIteRmFeMDK9Z2-izx744BiauvcphD2mhSjoxaXaY3Zvfi9CdwFVb2fowaDVn9UBVvLWiBg9HstaKzDMMqt35SMqCIDIfDm88fOUUrKubFoytPTJfi-RQnHWnrdZqjvHQlypb2uM1fivPcWPZpaazDSY3fT7QoD_d8poHKsQirW8MCuMrcPgsuRTO8pSj05wTq0QhZo7rSuaPwXJeXXWyvY4grdfOeZZnp84d_Nat0R-mKGAKzyNXA=w150-h123-no"
+    );
+
     let allJobs : Job[] = [];
-    allJobs.push(job0, job1, job2, job3, job4, job5, job6, job7, job8, job9, job10, job11, job12, job13, job14, job15, job16, job17);
+    allJobs.push(job0, job1, job2, job3, job4, job5, job6, job7, job8, job9, job10, job11, job12, job13, job14, job15, job16, job17, job18);
     return allJobs
   }
 
