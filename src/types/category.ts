@@ -7,6 +7,7 @@ export class Category {
     public static Java : Number = 6;
     public static Unity : Number = 7;
     public static Unreal : Number = 8;
+    public static NodeJS : Number = 9;
 
     public static Other: Number = 99;
 

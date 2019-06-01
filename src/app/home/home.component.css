@@ -17,7 +17,7 @@ ul.categories li.selected{
     color: #841ec9;
     border: 1px;
     border-color: #ff6721;
-    border-style: dashed
+    font-weight: bold;
 }
 
 div.job{

@@ -4,8 +4,8 @@ import { EmbedVideoService } from "ngx-embed-video"
 export class YoutubeVideo{
     public videoService : EmbedVideoService;
     private videoURL : string;
-    private width : Number =  1200;
-    private height : Number = 670;
+    private width : Number =  960;
+    private height : Number = 720;
     
     public setVideoUrl(newVideoURL: string) : void {
         this.videoURL = newVideoURL
