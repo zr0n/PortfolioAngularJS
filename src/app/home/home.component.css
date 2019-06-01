@@ -89,3 +89,21 @@ div#home-wrapper{
 .ngx-masonry{
     column-count: 2;
 }
+
+
+@media only screen and (max-width:580px){
+    
+    div#home-wrapper{
+        flex-direction: column;
+    }
+
+    ul.categories{
+        padding-left: 0px;
+    }
+
+    #jobs-wrapper{
+        margin-left: 0px;
+    }
+}
+
+

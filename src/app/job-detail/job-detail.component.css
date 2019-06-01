@@ -35,3 +35,13 @@
 img{
     width:100%;
 }
+
+@media only screen and (max-width: 1000px){
+    #job-detail-wrapper{
+        width: 95%;
+        margin: 10px
+    }
+    #job-detail-sample{
+        width: 95%;
+    }
+}
