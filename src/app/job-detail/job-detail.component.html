@@ -5,13 +5,14 @@
   <h1 id="job-detail-title">
     {{ job.titleWithBrackets() }}
   </h1>
+  <p id = "job-detail-description">
+    {{ job.description }}
+  </p>
   <div
     [innerHTML]="job.show()"
     id="job-detail-sample">
   </div>
-  <p id = "job-detail-description">
-    {{ job.description }}
-  </p>
+  
   
 </div>
 
