@@ -1,0 +1,8 @@
+Esse projeto foi desenvolvido com angular
+
+para buildar rode npm run ng build
+para executar execute npm run ng serve
+
+Após o build, tudo será gerado na pasta dist/portfolio.
+
+É necessario mudar o base href do index gerado para /portfolio/ para que funcione no github.io perfeitamente
