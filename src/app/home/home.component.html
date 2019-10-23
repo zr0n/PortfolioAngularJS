@@ -25,7 +25,7 @@
                   (mouseleave)="unHoverItem()">
                     <label
                       class="job-label"
-                      [class.label-visible] = "jobHovered && jobHovered.id == job.id">
+                      [class.label-visible] = "(jobHovered && jobHovered.id == job.id) || windowWidth < 1080">
                       
                       <p> {{job.title}} </p>
                     

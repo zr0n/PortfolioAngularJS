@@ -22,7 +22,11 @@ export class HomeComponent implements OnInit {
   categoriesService: CategoriesService;
   languageService: LanguageService;
   categoriesNames : CategoryName[];
-  jobHovered:Job;
+
+  windowHeight: number;
+  windowWidth: number;
+
+  jobHovered: Job;
   
   public static allJobs : Job[];
   
@@ -46,8 +50,14 @@ export class HomeComponent implements OnInit {
     this.categoriesService.setCategory(this.selectedCategory)
     this.jobs = this.categoriesService.jobs;
     this.categoriesNames = this.categoriesService.categoriesNames
+
+    this.updateWindowDimensions();
+    
   }
-  
+  updateWindowDimensions(){
+    this.windowHeight = window.innerHeight;
+    this.windowWidth = window.innerWidth;
+  }
   selectCategory(categoryNumber : Number) : void{
     this.categoriesService.setCategory(categoryNumber)
     this.selectedCategory = +categoryNumber
@@ -69,7 +79,7 @@ export class HomeComponent implements OnInit {
   setLangugage(newLangugage: string){
     this.languageService.setLanguage(newLangugage);
   }
-  
+
   private goToDetail( id : Number ){
     this.location.go(`/detail/${id}`)
 
