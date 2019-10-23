@@ -14,7 +14,10 @@ export class Job {
     public image : JobImage;
     public bShowVideo: Boolean = true;
     public categories : Category[] = [];
-    public description : string = "";
+    public descriptions : any = {
+        "pt-BR" : "",
+        "en-US" : ""
+    };
     public thumbnail : string = "https://via.placeholder.com/150";
     
 
@@ -62,14 +65,14 @@ export class Job {
 
     public setupWithVideo(
         inTitle: string,
-        inDescription: string,
+        inDescriptions: any,
         inCategories : Category[],
         inVideo: string,
         inThumbnail : string = ""
         ) : void {
         this.title = inTitle
         this.setVideo(inVideo);
-        this.setup(inDescription, inCategories);
+        this.setup(inDescriptions, inCategories);
         
         this.setThumbnail(inThumbnail)
 
@@ -77,7 +80,7 @@ export class Job {
 
     public setupWithImage(
         inTitle : string,
-        inDescription: string,
+        inDescriptions: any,
         inCategories : Category[],
         inImage: string,
         inThumbnail : string = ""
@@ -85,14 +88,14 @@ export class Job {
 
         this.title = inTitle
         this.setImage(inImage);
-        this.setup(inDescription, inCategories);
+        this.setup(inDescriptions, inCategories);
 
         this.setThumbnail(inThumbnail)
     }
 
-    public setup(inDescription:string, inCategories: Category[]){
+    public setup(inDescriptions:any, inCategories: Category[]){
         this.categories = inCategories;
-        this.description = inDescription;
+        this.descriptions = inDescriptions;
 
     }
 

@@ -8,6 +8,7 @@ import { EmbedVideoService } from 'ngx-embed-video';
 import { HomeComponent } from '../home/home.component'
 import { CategoriesService } from '../categories.service'
 import { Job } from '../../types'
+import { LanguageService } from '../language.service';
 
 
 @Component({
@@ -20,7 +21,9 @@ export class JobDetailComponent implements OnInit {
   public static route : ActivatedRoute;
 
   private categoriesService : CategoriesService;
+  private languageService : LanguageService;
   private location : Location;
+
 
   id : Number;
   job : Job;
@@ -29,10 +32,12 @@ export class JobDetailComponent implements OnInit {
     activatedRoute : ActivatedRoute,
     embedVideoService: EmbedVideoService,
     inCategoriesService : CategoriesService,
+    languageService: LanguageService,
     inLocation: Location
     ) {
     JobDetailComponent.route = activatedRoute;
     this.categoriesService = inCategoriesService;
+    this.languageService = languageService;
     this.location = inLocation;
   }
 
@@ -42,8 +47,12 @@ export class JobDetailComponent implements OnInit {
     this.job = this.categoriesService.searchJob(this.id)
   }
 
+  getLanguage() : string{
+    return this.languageService.language;
+  }
   public back() : void{
     this.location.back();
   }
 
+  
 }

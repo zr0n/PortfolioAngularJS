@@ -1,6 +1,9 @@
 <div id="home-wrapper">
+  <div id="language-selection">
+    <a href="#" (click)="languageService.setLanguage('pt-BR')"><img src="/assets/images/brazil.svg"></a>
+    <a href="#" (click)="languageService.setLanguage('en-US')"><img src="/assets/images/united-states.svg"></a>
+  </div>
   <ul class = "categories">
-    
     <li
         (click) = "selectCategory(category.id)"
         *ngFor="let category of categoriesNames"
