@@ -6,3 +6,6 @@ para executar execute npm run ng serve
 Após o build, tudo será gerado na pasta dist/portfolio.
 
 É necessario mudar o base href do index gerado para /portfolio/ para que funcione no github.io perfeitamente
+
+
+trocar <base href="https://zr0n.github.io/portfolio/"> para <base href="/portfolio/"> nas paginas index.html e 404.html

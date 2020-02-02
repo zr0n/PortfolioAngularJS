@@ -49,6 +49,8 @@ class CategoriesService {
 
   public searchJob(jobId : Number) : Job{
     let jobFound : Job;
+    console.log("Jobs");
+    console.log(this.allJobs);
     this.allJobs.map(( job : Job) => {
       if(job.id == jobId)
         jobFound = job;
@@ -95,6 +97,9 @@ class CategoriesService {
     let job18: Job = new Job(this.embedVideoService);
     let job19: Job = new Job(this.embedVideoService);
     let job20: Job = new Job(this.embedVideoService);
+    let job21: Job = new Job(this.embedVideoService);
+    let job22: Job = new Job(this.embedVideoService);
+    let job23: Job = new Job(this.embedVideoService);
 
 
     job0.setupWithVideo(
@@ -333,6 +338,42 @@ class CategoriesService {
       "https://lh3.googleusercontent.com/5jw0bAPfKh8m5c_4foHLsIxmIrxDv5VDbFWSV9ctyqdzHWnEXMcNd2UK07rUrNtWJxC7688cwV1Z71zRDrton5FzE4FVJnbd7DXh8p-AB4EKBOjjkFY9VyvJ4_t83RKLG2YvkR6DJLowIKqjhEZscZZmz1r7wArooTk5mYYMq4RbbllqTJq1MHVb7uuIGhyiZ4TbXU2mNkln5FDjhmAAuP2jWPpsrCMngNZjX5pmHpMPRBvnxDD4EHPNW62GMU8RSVIjLOyA710d20AAkUjMndIj6PEc-6TGBLNVp1c-tLA_AJ2BQk25B6afeT0Lj8POXUwV9laYkuMi_p8BjOvNLE6CR5JZObhajpAVZkxVXzHOUwll50yVAXBzytu4939RQ1n-ubL4VM71EGvmAK1NagrJ3V4GxwO9BLtmTTx24zJHkBlk23P8l--0uPmGsMkFP18S8iytPMebIHyMJNE_roTLz8xGtmp-G6_g6Swa2gdxLZma1hqA0ECF-HXLEHEkerp3YSuxEvWqPj9mZeUCR1ixN3IPaZ0HRLCkD36y4MlYv5txEXSdyJHteWfw1nIpJ81--iPaPSu6cvdAvKwzDbvWW1qzVsvmCPRvRrdsEMlBTtnbT2Kjr-C5SRdOKzYO8T_r00gimuYzdniZWwqZxEyEXzOZTL8=w1554-h936-no",
       "https://lh3.googleusercontent.com/NE1sZNpp12MRCMYILtI7CkOPfadcj32_AKlF3ZXf2Cf4X3NHtFOSe_nZO8WFcqUkzby2-ZaprY7TjcGfioBseEaN6NYVl-PPBr-c7AWAt9nE-9NJDm3GdTDLW_Lx2JVlvHExl875Fi-1sk694Wb0HoQ_V-RYfgJmx_UlG7cyoF-hZq0-KiOTvxthsjweyAKZ2v_raLNhkrKSUXIQGpDNe0DxE1YLuP4YBXEztnS3yqF3bFqPwkekgXew_mW10sl0Ipd4GMlQF3F94KIj1OR50RFVfWQ95g3n7Q9s3zdRMwFLpG7ntVlEPl4pYVvEOruzxMxdUQGb7QWIJZTqk00BPYg6OpJ5QwsY6aEaz74GiaRpCzA6Eyj8Wb5ZQxHZ62xOkVS60rLd96aLM-sUQozaUxEzl2xRpqdNzTD56NUj82v8VNGEGG6wLUKx6HneLGOwTAXh6CgPvddr3Ig0DXU-ktDku1Dn7NGOCL65thqzC8kgONcspfaoal1RbqtvwFtZZ8XUu1mS1BYgxchr6wqJ1weetVz0EzKNDnljE4zC7j_76JIihLuzSg_QVm6duFI8FJ3_kQe6uU8q3-Q2ULKrnhrOTpiJE2VoBRBmBJnyHxTnyRw3ESvH0cYMuwF_XfgpdwxI0QmPKk80SWg2NTjtxXiFBEULMak=s150-no"
     );
+
+    job21.setupWithVideo(
+      "Amazonas em Tempo",
+      {
+        "pt-BR": "Aplicativo desenvolvido junto com a empresa Mundiware. Usamos react native para desenvolver o aplicativo de forma híbrida.",
+        "en-US": "App developed with the devhouse Mundiware. We used React Native to develop an hybrid app."
+      },
+      [Category.Javascript],
+      "https://youtu.be/HZguZLUA1Js",
+      "https://lh3.googleusercontent.com/xLb4HJZDqDqyIXL96vResGjkTCoW1V-yPYoPX_4dF8wM9GX5Fy8MmVKQ-eeRN8myVB9Rjz7oEKbjXZrSN9FmaKn8Z9oX-JgA-ugTGhr-08Cslz6PNjRQzscZ7S2J6R9fRzH3dRug3ICLmPOqNYnf-Qt2Dh7F6Rjp8A5qxwwhaclrdsrKsVNTbCK6XwjY5quruoX6bmtGEvAV4GJ2lzrxetpyhwO6Jiag_ceeb_TYtJYXtjuo3M9df-naZVotKNHqysVkGsY7DqQS0j2nc4M5PIeoo76NioTAcGFwDgDHji992J1UIWFvKkGLJuaqaSVJTjp8iH9hwm8Po40dNAa15AQYl46djl2EoBCBtTVMDLg43cDq6WKpX8pKi2-M16LDvldoXjlVn9FxNNCyyaL1FSCDb5Bp2TqIv5wmNNOlvfZ9LS9abVGObBMSPM3qaznuiPWcmGnqtCfE1KNBbMSP_p0Kcxmxr_-x1MzRpRJVNfOfXfKO0QhEUMC-mFqjhadaqFSG8ZzbUK_1UvE3xgy8OeWQNCcLdfRbptVCoyyDxxmf8nXZvMPGIGNOzDtAQBPRtvg20DAgi7ciOfffdIuyKwuHdrQrXRl6wpvy6uQ2ULgdYHGjKmUvRo2useedAlsGUdaEOV2jom4tKZlCpcYSp28BSd6EaJlR1LP2ooqhRPrN1-yrSZgjEXUrUCMA7iaScOMCd-bj07jW0fKipujHelzF-89Rd7AWOWQg-veIr3CMnXul=w526-h500-no"
+    );
+
+    job22.setupWithVideo(
+      "Gazeta de Alagoas",
+      {
+        "pt-BR": "Aplicativo desenvolvido junto com a empresa Mundiware. Usamos react native para desenvolver o aplicativo de forma híbrida.",
+        "en-US": "App developed with the devhouse Mundiware. We used React Native to develop an hybrid app."
+      },
+      [Category.Javascript],
+      "https://youtu.be/9_0TQKckvlA",
+      "https://lh3.googleusercontent.com/2CoWHFqKfw1YDlSvGky8mhAn6BqJ0Wc8fFZAwVIG7GjworzSxfQLKVXMb3XSwv-Ud2ghBE0cNohbSQqdgtBQn6oCT6dZuG8Us_xSdNOZO7gMoJsa7Ryi2pRBRAUb8nzfgIlXO5bpKHfnip7BoOLd-i5RU1wXN41lZEevF6GyiIFOGgZACvkJk4DwGivgE_w3tYkCC_K29IXECzG1Z6cOHcRQqiQEGEPi5Ac3k0QbGLqQi_rC3iSJDjhcpmr15ep4dR_Hlhev0_70kQxSQK7Uqt_OWZa4bVnGgRWS8c79TpRFPY7HclBfiM8M92rqzBTmv-6ykfuTIaecVVTIVva_4RP6-lIznNYtln-7onMA7FJYLCbWhM6c8o8TCKQ6ztQrqIX_5ruVhGZh5Q9KXS4GGm9Pb10l1BetENRrhPtX2Cxe07jlwlrdiqsjV0SkLV5Q9gPrnkI8N8yRO2uxegnKENRT9ZxA4MMn1B2fWe_AIi7qukP5zQCrzTkud3wAZVXTrRPnFb5jEAHfZ3-w29qnLArpDUr-JOgvxGZHjjcQ4eOvMsLpP5XIJJ5jGltNCZf1vLCURmdLiFT4R8wW2azA0ndkd2jHZvb4mGpx9Wg2u_iCeMyOukPJgXC_mXkrBpyf9EvgtH3QL8fibP_XdmYpA_8fmHKB_c4h1pslbt1i5Tt8H-E_U7cWk9GdGVee-ZAonchswXWzmPCF3SsBGw12UX0WUhTkyv-N8aRECaWEPy02S0L5=w518-h409-no"
+    );
+
+    job23.setupWithVideo(
+      "Diário do Pará",
+      {
+        "pt-BR": "Aplicativo desenvolvido junto com a empresa Mundiware. Usamos react native para desenvolver o aplicativo de forma híbrida.",
+        "en-US": "App developed with the devhouse Mundiware. We used React Native to develop an hybrid app."
+      },
+      [Category.Javascript],
+      "https://youtu.be/ved8B2aKLRw",
+      "https://lh3.googleusercontent.com/dSQPKZsIL1p1NOzB4458a2b7x-HW1yGFURe56Rzxknpxro6ChjOyd7d38aR_byD2Kjx5r3F5HrdA3TVYm_YgyAFH-vOfG4dKsVrSDX9dlYIR7D39Wf_S1qSfYteSzYbuL9ocIeQyNIFPztmFWP2s0WaJTfiHNay7wLufSNlEFHvUiBvzbvKayEntc9OoAgIZe6t41gBSwdF5Cj8Z5zvHEltDamABwsw8NLBs2clELBphgwx0DNGTV2RAGuPp2fwsKH3SIG7pPM72pCYzbuxxpuf-yk4wt4rc5zQ6fitGUypNVYRpsgL7yPm3ixkp2l8PzwXgCzskJLDWQoEtoUPbunh0n8nrIfZQwqdz7L4MCPDXxT-RO7e4hOxIJu0MdyD7G6GrOw7b3hUazojgk_crxEVSK2JhlOhP0I9AOUstQW-TiqGPREnxDKjx2uwT84KWPm9DqFtP8fQSSjK8CGS3o41iUIBzOR8JbSvrD5YPCDs0gH2O2F8HvJfMqaksq-q6lSfE1czo25wTOJBCDjBsMa2EGezsF_6R-JuSXcSOSyvPcoIBuQi78qu2b82vmUTnWmRTTiY7vSa1ewHPxdlcBhBtlqngxoOt9zxSFNHWrf1WRedQzJVlI_njcawU_b6ch_ODT6IKQwRgKKMVrVfE6SBGhmc0oeMs55QobJ8mli65vmNirDI-jDzRV1iEh-XQUu38RL6XL_mqryP5AuDjDrhkStHgZKQDjtZ7EcBwwylEh272=w496-h352-no"
+    );
+
+
+    
 
     
     let allJobs : Job[] = [];
